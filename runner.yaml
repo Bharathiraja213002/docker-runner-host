@@ -6,7 +6,7 @@ services:
 
     environment:
       RUNNER_SCOPE: repo
-      REPO_URL: https://github.com/Bharathiraja213002/githubrunner
+      REPO_URL: https://github.com/Bharathiraja213002/docker-runner-host
       RUNNER_NAME: ubuntu-docker-runner
       RUNNER_TOKEN: ${RUNNER_TOKEN}
       RUNNER_WORKDIR: /tmp/runner/work
