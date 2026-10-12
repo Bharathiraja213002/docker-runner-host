@@ -1,0 +1,18 @@
+services:
+  github-runner:
+    image: myoung34/github-runner:latest
+    container_name: github-local-runner
+    restart: unless-stopped
+
+    environment:
+      RUNNER_SCOPE: repo
+      REPO_URL: https://github.com/Bharathiraja213002/githubrunner
+      RUNNER_NAME: ubuntu-docker-runner
+      RUNNER_TOKEN: ${RUNNER_TOKEN}
+      RUNNER_WORKDIR: /tmp/runner/work
+      CONFIGURED_ACTIONS_RUNNER_FILES_DIR: /runner/data
+      LABELS: local-docker
+
+    volumes:
+      - ./runner-data:/runner/data
+      - ./runner-work:/tmp/runner/work
